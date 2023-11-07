@@ -18,30 +18,13 @@ header("location:index.php?page=home");
 <!DOCTYPE html>
 <html lang="en">
 <?php include 'includes/header.php' ?>
-<body class="hold-transition login-page bg-black">
-<div class="login-box">
-  <div class="login-logo">
-    <a href="#" class="text-white"><b><?php echo $_SESSION['system']['name'] ?> - Admin</b></a>
-  </div>
-  <!-- /.login-logo -->
-  <div class="card">
-    <div class="card-body login-card-body">
+<body>
       <form action="" id="login-form">
         <div class="input-group mb-3">
           <input type="email" class="form-control" name="email" required placeholder="Email">
-          <div class="input-group-append">
-            <div class="input-group-text">
-              <span class="fas fa-envelope"></span>
-            </div>
-          </div>
         </div>
         <div class="input-group mb-3">
           <input type="password" class="form-control" name="password" required placeholder="Password">
-          <div class="input-group-append">
-            <div class="input-group-text">
-              <span class="fas fa-lock"></span>
-            </div>
-          </div>
         </div>
         <div class="row">
           <div class="col-8">
@@ -59,11 +42,6 @@ header("location:index.php?page=home");
           <!-- /.col -->
         </div>
       </form>
-    </div>
-    <!-- /.login-card-body -->
-  </div>
-</div>
-<!-- /.login-box -->
 <script>
   $(document).ready(function(){
     $('#login-form').submit(function(e){

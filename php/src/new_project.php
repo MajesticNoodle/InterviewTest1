@@ -84,10 +84,10 @@
 		</div>
         </form>
     	</div>
-    	<div class="card-footer border-top border-info">
+    	<div class="card-footer border-top">
     		<div class="d-flex w-100 justify-content-center align-items-center">
-    			<button class="btn btn-flat  bg-gradient-primary mx-2" form="manage-project">Save</button>
-    			<button class="btn btn-flat bg-gradient-secondary mx-2" type="button" onclick="location.href='index.php?page=project_list'">Cancel</button>
+    			<button class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" form="manage-project">Save</button>
+    			<button class="d-none d-sm-inline-block btn btn-sm btn-dark shadow-sm" type="button" onclick="location.href='index.php?page=project_list'">Cancel</button>
     		</div>
     	</div>
 	</div>
