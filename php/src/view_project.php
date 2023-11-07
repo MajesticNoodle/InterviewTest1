@@ -26,23 +26,23 @@ $manager = $manager->num_rows > 0 ? $manager->fetch_array() : array();
 							<div class="row">
 								<div class="col-sm-6">
 									<dl>
-										<dt><b class="border-bottom border-primary">Project Name</b></dt>
+										<dt><b class="border-primary">Project Name</b></dt>
 										<dd><?php echo ucwords($name) ?></dd>
-										<dt><b class="border-bottom border-primary">Description</b></dt>
+										<dt><b class="border-primary">Description</b></dt>
 										<dd><?php echo html_entity_decode($description) ?></dd>
 									</dl>
 								</div>
 								<div class="col-md-6">
 									<dl>
-										<dt><b class="border-bottom border-primary">Start Date</b></dt>
+										<dt><b class="border-primary">Start Date</b></dt>
 										<dd><?php echo date("F d, Y",strtotime($start_date)) ?></dd>
 									</dl>
 									<dl>
-										<dt><b class="border-bottom border-primary">End Date</b></dt>
+										<dt><b class="border-primary">End Date</b></dt>
 										<dd><?php echo date("F d, Y",strtotime($end_date)) ?></dd>
 									</dl>
 									<dl>
-										<dt><b class="border-bottom border-primary">Status</b></dt>
+										<dt><b class="border-primary">Status</b></dt>
 										<dd>
 											<?php
 											if($stat[$status] =='Pending'){
@@ -62,7 +62,7 @@ $manager = $manager->num_rows > 0 ? $manager->fetch_array() : array();
 										</dd>
 									</dl>
 									<dl>
-										<dt><b class="border-bottom border-primary">Project Manager</b></dt>
+										<dt><b class="border-primary">Project Manager</b></dt>
 										<dd>
 											<?php if(isset($manager['id'])) : ?>
 											<div class="d-flex align-items-center mt-1">
@@ -83,6 +83,8 @@ $manager = $manager->num_rows > 0 ? $manager->fetch_array() : array();
 	</div>
 </div>
 	<div class="row">
+		<div class="col-md-8">
+		</div>
 		<div class="col-md-4">
 			<div class="card shadow mb-4">
 				<!-- Card Header - Accordion -->
