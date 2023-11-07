@@ -32,6 +32,7 @@ Once all that is done, run below command.
 That should start it up.
 
 go to browser and either type or copy paste the following
+
     localhost:8000
     http://localhost:8000/
 
