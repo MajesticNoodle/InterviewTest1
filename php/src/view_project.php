@@ -27,13 +27,7 @@ $manager = $manager->num_rows > 0 ? $manager->fetch_array() : array();
                         <b class="border-primary">Project Name</b>
                       </dt>
                       <dd> <?php echo ucwords($name) ?> </dd>
-                      <dt>
-                        <b class="border-primary">Description</b>
-                      </dt>
-                      <dd> <?php echo html_entity_decode($description) ?> </dd>
                     </dl>
-                  </div>
-                  <div class="col-md-6">
                     <dl>
                       <dt>
                         <b class="border-primary">Start Date</b>
@@ -72,6 +66,8 @@ $manager = $manager->num_rows > 0 ? $manager->fetch_array() : array();
 											}
 											?> </dd>
                     </dl>
+                  </div>
+                  <div class="col-md-6">
                     <dl>
                       <dt>
                         <b class="border-primary">Project Manager</b>
@@ -81,6 +77,10 @@ $manager = $manager->num_rows > 0 ? $manager->fetch_array() : array();
                         </div> <?php else: ?> <small>
                           <i>Manager Deleted from Database</i>
                         </small> <?php endif; ?> </dd>
+                        <dt>
+                        <b class="border-primary">Description</b>
+                      </dt>
+                      <dd> <?php echo html_entity_decode($description) ?> </dd>
                     </dl>
                   </div>
                 </div>
@@ -91,30 +91,25 @@ $manager = $manager->num_rows > 0 ? $manager->fetch_array() : array();
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-md-8"></div>
-    <div class="col-md-4">
-      <div class="card shadow mb-4">
-        <!-- Card Header - Accordion -->
-        <a href="#collapseTeamMembers" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseTeamMembers">
-          <h6 class="m-0 font-weight-bold text-primary">Team Member/s:</h6>
-        </a>
-        <!-- Card Content - Collapse -->
-        <div class="collapse show" id="collapseTeamMembers">
-          <div class="card-body">
-            <ul class="users-list clearfix"> <?php 
-							if(!empty($user_ids)):
-								$members = $conn->query("SELECT *,concat(firstname,' ',lastname) as name FROM users where id in ($user_ids) order by concat(firstname,' ',lastname) asc");
-								while($row=$members->fetch_assoc()):
-							?> <li>
-                <a class="users-list-name" href="javascript:void(0)"> <?php echo ucwords($row['name']) ?> </a>
-                <!-- <span class="users-list-date">Today</span> -->
-              </li> <?php 
-								endwhile;
-							endif;
-							?> </ul>
-          </div>
-        </div>
+  <div class="card shadow mb-4">
+    <!-- Card Header - Accordion -->
+    <a href="#collapseTeamMembers" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseTeamMembers">
+      <h6 class="m-0 font-weight-bold text-primary">Team Member/s:</h6>
+    </a>
+    <!-- Card Content - Collapse -->
+    <div class="collapse show" id="collapseTeamMembers">
+      <div class="card-body">
+        <ul class="users-list clearfix"> <?php 
+          if(!empty($user_ids)):
+            $members = $conn->query("SELECT *,concat(firstname,' ',lastname) as name FROM users where id in ($user_ids) order by concat(firstname,' ',lastname) asc");
+            while($row=$members->fetch_assoc()):
+          ?> <li>
+            <a class="users-list-name" href="javascript:void(0)"> <?php echo ucwords($row['name']) ?> </a>
+            <!-- <span class="users-list-date">Today</span> -->
+          </li> <?php 
+            endwhile;
+          endif;
+          ?> </ul>
       </div>
     </div>
   </div>

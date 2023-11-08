@@ -1,0 +1,8 @@
+Technical Explanation/Justifying language use and framework:
+
+I used base PHP without framework as primary as it's the freest form of it, allowing one to do whatever you want to without being restricted or at least it's easier to do what you'd want to without hitting some walls.
+Laravel and Codeigniter have some limitations and will require more effort to get beyond that, at least this is what I tell myself and I could be wrong, I just haven't found that yet.
+Base php does require extra effort when it comes to security and some features pre-built into frameworks but that's alright, security wasn't the focus on this project but it does make use of some
+
+Using Bootstrap as style framework is a no-brainer, it just works and looks amazing.
+Using their admin template saved a whole lot of time, and since there was no request for custom styles, I think it is allowed to use.
