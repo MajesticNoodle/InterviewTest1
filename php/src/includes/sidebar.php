@@ -1,6 +1,6 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
   <div class="dropdown">
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html"> <?php if($_SESSION['login_type'] == 1): ?> <div class="sidebar-brand-text mx-3">Admin</div> <?php else: ?> <div class="sidebar-brand-text mx-3">User</div> <?php endif; ?> </a>
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php"> <?php if($_SESSION['login_type'] == 1): ?> <div class="sidebar-brand-text mx-3">Admin</div> <?php else: ?> <div class="sidebar-brand-text mx-3">User</div> <?php endif; ?> </a>
     <!-- Divider -->
     <hr class="sidebar-divider my-0">
     <!-- Nav Item - Dashboard -->
