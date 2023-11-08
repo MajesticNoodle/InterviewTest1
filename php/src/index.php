@@ -32,6 +32,19 @@
               <!-- Nav Item - User Information -->
               <li class="nav-item dropdown no-arrow">
                 <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="mr-2 d-none d-lg-inline text-gray-600 small"> <?php echo $data->name; ?> </span>
+                </a>
+              </li>
+              <li class="nav-item dropdown no-arrow">
+                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="mr-2 d-none d-lg-inline text-gray-600 small"> <img src="https://openweathermap.org/img/w/<?php echo $data->weather[0]->icon; ?>.png"
+                  class="weather-icon" /> <?php echo $data->main->temp_max; ?>°C<span
+                  class="min-temperature"><?php echo $data->main->temp_min; ?>°C</span> </span>
+                </a>
+              </li>
+              <div class="topbar-divider d-none d-sm-block"></div>
+              <li class="nav-item dropdown no-arrow">
+                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <span class="mr-2 d-none d-lg-inline text-gray-600 small"> <?php echo $_SESSION['login_name'] ?> </span>
                 </a>
                 <!-- Dropdown - User Information -->
