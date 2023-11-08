@@ -7,7 +7,7 @@
       </div>
     </div>
     <div class="card-body table-responsive">
-      <table class="table tabe-hover table-bordered" id="list">
+      <table class="table tabe-hover table-condensed" id="list">
         <thead>
           <tr>
             <th class="text-center">#</th>
@@ -55,11 +55,14 @@
   $(document).ready(function() {
         $('#list').dataTable()
         $('.view_user').click(function() {
-            uni_modal(" < i class = 'fa fa-id-card' > < /i> User Details","view_user.php?id="+$(this).attr('data-id'))
-            }) $('.delete_user').click(function() {
-            _conf("Are you sure to delete this user?", "delete_user", [$(this).attr('data-id')])
-          })
-        })function delete_user($id) {
+          uni_modal("<i class='fa fa-id-card'></i>User Details","view_user.php?id="+$(this).attr('data-id'))
+        })   
+        $('.delete_user').click(function() {
+          _conf("Are you sure to delete this user?", "delete_user", [$(this).attr('data-id')])
+        })
+  })
+        
+        function delete_user($id) {
         start_load()
         $.ajax({
           url: 'ajax.php?action=delete_user',

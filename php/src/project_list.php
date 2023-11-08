@@ -1,5 +1,5 @@
 <?php include'includes/config.php' ?> <div class="col-lg-12">
-  <div class="card card-outline card-success">
+  <div class="card card-outline card-success" style="border:none;">
     <div class="card-header"> <?php if($_SESSION['login_type'] != 3): ?> <div class="card-tools">
         <a class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" href="./index.php?page=new_project">
           <i class="fa fa-plus"></i> Add New project </a>
@@ -44,7 +44,9 @@
 					$i = 1;
 					$stat = array("Pending","Started","In-Progress","On-Hold","Over Due","Done");
 					$where = "";
-          $filterid = $_POST['filterselect'];
+          if(isset($_POST['filterselect'])){
+            $filterid = $_POST['filterselect'];
+          }
 					if($_SESSION['login_type'] == 2){
 						$where = " where manager_id = '{$_SESSION['login_id']}' ";
 					}elseif($_SESSION['login_type'] == 3){

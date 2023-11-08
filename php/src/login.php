@@ -1,16 +1,6 @@
-<?php 
+<?php
 session_start();
 include('./includes/config.php');
-  ob_start();
-  // if(!isset($_SESSION['system'])){
-
-    $system = $conn->query("SELECT * FROM system_settings")->fetch_array();
-    foreach($system as $k => $v){
-      $_SESSION['system'][$k] = $v;
-    }
-  // }
-  ob_end_flush();
-?> <?php 
 if(isset($_SESSION['login_id']))
 header("location:index.php?page=home");
 ?>
@@ -18,10 +8,10 @@ header("location:index.php?page=home");
 <html lang="en"> <?php include 'includes/header.php' ?> <body>
     <form action="" id="login-form">
       <div class="input-group mb-3">
-        <input type="email" class="form-control" name="email" required placeholder="Email">
+        <input type="email" class="form-control" name="email" required placeholder="Email" value="admin@admin.com">
       </div>
       <div class="input-group mb-3">
-        <input type="password" class="form-control" name="password" required placeholder="Password">
+        <input type="password" class="form-control" name="password" required placeholder="Password" value="admin">
       </div>
       <div class="row">
         <div class="col-8">
